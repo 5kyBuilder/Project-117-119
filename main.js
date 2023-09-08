@@ -90,6 +90,7 @@ function skip()
 
         console.log(sketch);
     }else{
+        counter = 0;
         gameIsOver = true;
         skipe = true;
     }
