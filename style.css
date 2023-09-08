@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(179, 216, 14);
+}
+
+.btn-info{
+    float: right;
+    margin-top: 3.5px;
+}
+
+h1{
+    background: white;
+}
+
+#score{
+    float: right
+}
+
+#timer{
+    float: left;
+}
+
+canvas{
+    margin-top: 210px;
+    background-color: white;
+    animation-name: box;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes box {
+    from{box-shadow: 1px 1px 48px red;}
+    to{box-shadow: 1px 1px 48px blue;}
+}
