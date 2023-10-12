@@ -89,10 +89,12 @@ function skip()
         document.getElementById("sketch").innerHTML = "Sketch To Be Drawn: " + sketch;
 
         console.log(sketch);
-    }else{
+    }else{  
         counter = 0;
         gameIsOver = true;
         skipe = true;
+
+        
     }
     
 }
@@ -108,6 +110,32 @@ function draw()
         if(!gameIsOver){
             document.getElementById("timer").innerHTML = "Time: " + (counter/70).toFixed(2);
             counter++;
+
+            if((counter/70).toFixed(2) >= 4)
+            {  
+                background("white")
+        
+                gameIsOver = false;
+                gameStart = true;
+
+                counter = 0;
+
+                do{
+                    random = Math.floor(Math.random() * (sketches.length - 1));
+            
+                    if(sketches[random] == sketch){
+                        found = false
+                    }else{    
+                        found = true
+                    }
+            
+                    }while(!found)
+
+                    sketch = sketches[random];
+
+                    document.getElementById("sketch").innerHTML = "Sketch To Be Drawn: " + sketch;     
+            
+            }
         }else{
             
             console.log(counter);
